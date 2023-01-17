@@ -8,6 +8,7 @@ const app = express()
 app.use('/add-product', (req,res,next) => {
   console.log('In the middleware')
   res.send('<h1>This is the Add Product Page</h1>')
+  // don't do next in routes middleware
 })
 
 app.use('/', (req,res,next) => {
