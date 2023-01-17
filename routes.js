@@ -42,3 +42,6 @@ module.exports = requestHandler;
 //   handler: requestHandler,
 //   someText: 'Some hard coded text'
 // }
+// Alternative way to export multiple keys form a file:
+// module.exports.handler = requestHandler
+// module.exports.someText = 'Some hard coded text'
