@@ -24,7 +24,8 @@ app.use('/add-product', (req,res,next) => {
   // don't do next in routes middleware
 })
 
-app.use('/product', (req, res, next) => {
+// can use app.get, app.post, app.put, etc. to limit actions to filter
+app.post('/product', (req, res, next) => {
   console.log(req.body)
   res.redirect('/')
 })
