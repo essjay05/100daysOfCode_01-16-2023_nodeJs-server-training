@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3000
 const app = express()
 
 const adminRoutes = require('./routes/admin')
+const shopRoutes = require('./routes/shop')
 
 // middleware
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -13,10 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 // Routes
 app.use(adminRoutes)
-
-app.use('/', (req,res,next) => {
-  res.send('<h1>Hello from express!</h1>')
-})
+app.use(shopRoutes)
 
 app.listen(PORT, () => {
   console.log(`App listening on PORT: ${PORT}`)
