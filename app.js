@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const path = require('path')
 
 const PORT = process.env.PORT || 3000
 
@@ -18,7 +19,7 @@ app.use(shopRoutes)
 
 // 404 catchall
 app.use((req, res, next) => {
-  res.status(404).send(`<h1>Page not found</h1>`)
+  res.status(404).sendFile(path.join(__dirname, 'views', 'page-not-found.html'))
 })
 
 app.listen(PORT, () => {
