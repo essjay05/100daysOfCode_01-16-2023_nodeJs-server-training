@@ -1,0 +1,23 @@
+{
+  "name": "node-server-training",
+  "version": "1.0.0",
+  "description": "Refreshing on how to build a node server.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/essjay05/100daysOfCode_01-16-2023_nodeJs-server-training.git"
+  },
+  "author": "Joy S.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/essjay05/100daysOfCode_01-16-2023_nodeJs-server-training/issues"
+  },
+  "homepage": "https://github.com/essjay05/100daysOfCode_01-16-2023_nodeJs-server-training#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
