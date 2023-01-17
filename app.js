@@ -5,6 +5,8 @@ const PORT = process.env.PORT || 3000
 
 const app = express()
 
+const adminRoutes = require('./routes/admin')
+
 // middleware
 app.use('/', (req, res, next) => {
   console.log('This always runs!')
@@ -14,21 +16,9 @@ app.use('/', (req, res, next) => {
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
+
 // Routes
-
-// Note paths should have least complex (ie. '/') on bottom as it will filter
-// out as it goes down
-app.use('/add-product', (req,res,next) => {
-  console.log('In the middleware')
-  res.send('<form action="/product" method="POST"><input type="text" name="title"><button type="submit">Add product</button></form>')
-  // don't do next in routes middleware
-})
-
-// can use app.get, app.post, app.put, etc. to limit actions to filter
-app.post('/product', (req, res, next) => {
-  console.log(req.body)
-  res.redirect('/')
-})
+app.use(adminRoutes)
 
 app.use('/', (req,res,next) => {
   console.log('In the middleware')
