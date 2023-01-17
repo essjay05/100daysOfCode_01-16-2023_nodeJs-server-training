@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 
 // Routes
-app.use(adminRoutes)
+app.use('/admin', adminRoutes)
 app.use(shopRoutes)
 
 // 404 catchall
