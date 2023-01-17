@@ -36,3 +36,9 @@ const requestHandler = (req, res) => {
 }
 
 module.exports = requestHandler;
+
+// Below is an example if you were exporting multiple keys from this file.
+// module.exports = {
+//   handler: requestHandler,
+//   someText: 'Some hard coded text'
+// }
