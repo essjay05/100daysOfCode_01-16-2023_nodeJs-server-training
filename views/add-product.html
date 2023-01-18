@@ -39,7 +39,34 @@
     .main-header__item a:hover,
     .main-header__item a:active,
     .main-header__item a.active {
-      color: #6200ff;
+      color: #31027c;
+    }
+    .product-form {
+      width: 80%;
+      margin: 1rem auto;
+    }
+    .product-form input {
+      width: 100%;
+      border: 1px solid goldenrod;
+      height: 2.25rem;
+      border-radius: .25rem;
+      padding: .25rem;
+    }
+    .product-form button {
+      margin: 1rem auto;
+      background: white;
+      padding: .75rem;
+      color: #31027c;
+      border: 2px solid #31027c;
+      border-radius: .25rem;
+      cursor: pointer;
+      transition: .3s ease-in-out;
+      font-weight: 600;
+    }
+    .product-form button:hover,
+    .product-form button:focus {
+      background: #31027c;
+      color: white;
     }
   </style>
 </head>
@@ -53,9 +80,9 @@
     </nav>
   </header>
   <main>
-    <form action="/add-product" method="POST">
-      <input type="text" name="title">
-      <button type="submit">Add Product</button>
+    <form class="product-form" action="/add-product" method="POST">
+      <input class="product-form_input" placeholder="Title" type="text" name="title" id="title">
+      <button class="product-form_button" type="submit">Add Product</button>
     </form>
   </main>
 </body>
