@@ -7,7 +7,9 @@ const PORT = process.env.PORT || 3000
 
 const app = express()
 
-const adminRoutes = require('./routes/admin')
+app.set('view engine', 'pug')
+
+const adminData = require('./routes/admin')
 const shopRoutes = require('./routes/shop')
 
 // middleware
@@ -15,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
 // Routes
-app.use('/admin', adminRoutes)
+app.use('/admin', adminData.routes)
 app.use(shopRoutes)
 
 // 404 catchall
