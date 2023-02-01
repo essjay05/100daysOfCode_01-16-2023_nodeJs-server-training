@@ -8,7 +8,14 @@ const PORT = process.env.PORT || 3000
 
 const app = express()
 
-app.engine('hbs', expressHbs({layoutsDir: 'views/layouts', defaultLayout: 'main-layout'}))
+app.engine(
+  'hbs', 
+  expressHbs({
+    layoutsDir: 'views/layouts', 
+    defaultLayout: 'main-layout',
+    extname: 'hbs'
+  })
+)
 app.set('view engine', 'hbs')
 app.set('views', 'views')
 
