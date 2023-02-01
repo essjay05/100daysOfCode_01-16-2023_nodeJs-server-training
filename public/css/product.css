@@ -34,3 +34,7 @@
   background: #31027c;
   color: white;
 }
+
+.card.product-item {
+  width: 45%;
+}
