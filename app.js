@@ -23,7 +23,7 @@ app.use(shopRoutes)
 
 // 404 catchall
 app.use((req, res, next) => {
-  res.status(404).render('page-not-found', { pageTitle: '404 ERROR'})
+  res.status(404).render('page-not-found', { pageTitle: '404 ERROR', path: null})
 })
 
 app.listen(PORT, () => {
