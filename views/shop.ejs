@@ -1,22 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= pageTitle %></title>
-  <link href="/css/main.css" rel="stylesheet"/>
+<%- include('global/head.ejs') %>
   <link href="/css/product.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="main-header">
-    <nav class="main-header__nav">
-      <ul class="main-header__item-list">
-        <li class="main-header__item"><a class="active" href="/">Shop</a></li>
-        <li class="main-header__item"><a href="/admin/add-product">Add Product</a></li>
-      </ul>
-    </nav>
-  </header>
+  <%- include('global/nav.ejs') %>
   <main>
     <% if (prods.length > 0) { %>
       <h1>My Products</h1>
@@ -43,5 +29,4 @@
       <h1>No products found in the shop</h1>
     <% } %>
   </main>
-</body>
-</html>
+<%- include('global/end.ejs') %>

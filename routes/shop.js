@@ -12,6 +12,7 @@ router.get('/', (req,res,next) => {
   console.log(products)
   res.render('shop', {
     prods: products, 
+    path: '/',
     pageTitle: 'Shop', 
     hasProducts: products.length > 0,
     shopActive: true,
