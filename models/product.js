@@ -2,7 +2,9 @@ const fs = require('fs')
 const path = require('path')
 const rootDir = require('../util/path')
 
-const products = []
+const getProductsFromFile = () => {
+
+}
 
 module.exports = class Product {
   constructor(t) {
@@ -11,7 +13,7 @@ module.exports = class Product {
 
   save() {
     const p = path.join(
-      path.dirname(process.mainModule.filename), 
+      rootDir, 
       'data',
       'products.json'
     )
@@ -29,7 +31,7 @@ module.exports = class Product {
 
   static fetchAll(cb) {
     const p = path.join(
-      path.dirname(process.mainModule.filename), 
+      rootDir, 
       'data',
       'products.json'
     )
