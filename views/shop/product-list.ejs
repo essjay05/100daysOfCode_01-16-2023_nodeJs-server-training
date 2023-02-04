@@ -1,8 +1,8 @@
-<%- include('global/head.ejs') %>
+<%- include('../global/head.ejs') %>
   <link href="/css/product.css" rel="stylesheet"/>
 </head>
 <body>
-  <%- include('global/nav.ejs') %>
+  <%- include('../global/nav.ejs') %>
   <main>
     <% if (prods.length > 0) { %>
       <h1>My Products</h1>
@@ -29,4 +29,4 @@
       <h1>No products found in the shop</h1>
     <% } %>
   </main>
-<%- include('global/end.ejs') %>
+<%- include('../global/end.ejs') %>

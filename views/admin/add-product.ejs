@@ -1,9 +1,9 @@
-<%- include('global/head.ejs') %>
+<%- include('../global/head.ejs') %>
   <link href="/css/forms.css" rel="stylesheet"/>
   <link href="/css/product.css" rel="stylesheet"/>
 </head>
 <body>
-  <%- include('global/nav.ejs') %>
+  <%- include('../global/nav.ejs') %>
   <main>
     <form class="product-form" action="/admin/add-product" method="POST">
       <div class="form-control">
@@ -13,4 +13,4 @@
       <button class="product-form_button" type="submit">Add Product</button>
     </form>
   </main>
-<%- include('global/end.ejs') %>
+<%- include('../global/end.ejs') %>
