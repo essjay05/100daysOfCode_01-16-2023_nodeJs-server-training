@@ -18,14 +18,15 @@ const shopRoutes = require('./routes/shop')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
+// Controllers
+const adminController = require('./controllers/admin')
+
 // Routes
 app.use('/admin', adminRoutes)
 app.use(shopRoutes)
 
 // 404 catchall
-app.use((req, res, next) => {
-  res.status(404).render('page-not-found', { pageTitle: '404 ERROR', path: null})
-})
+app.use(adminController.getErrorRoute)
 
 app.listen(PORT, () => {
   console.log(`App listening on PORT: ${PORT}`)
