@@ -19,14 +19,14 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
 // Controllers
-const adminController = require('./controllers/admin')
+const errorController = require('./controllers/error')
 
 // Routes
 app.use('/admin', adminRoutes)
 app.use(shopRoutes)
 
 // 404 catchall
-app.use(adminController.getErrorRoute)
+app.use(errorController.get404Route)
 
 app.listen(PORT, () => {
   console.log(`App listening on PORT: ${PORT}`)
