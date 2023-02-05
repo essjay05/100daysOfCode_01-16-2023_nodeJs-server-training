@@ -7,6 +7,8 @@
 .product-item {
   width: 20rem;
   max-width: 95%;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
 }
 
 .product__title {
@@ -22,6 +24,14 @@
 
 .product__description {
   text-align: center;
+}
+
+.product__image {
+  height: 16rem;
+  width: 12rem;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
 }
 
 .card.product-item {
