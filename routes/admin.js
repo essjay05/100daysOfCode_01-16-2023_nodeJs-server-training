@@ -32,4 +32,7 @@ router.get('/edit-product', adminController.getEditProduct)
 // /admin/edit-product => PUT
 router.put('/edit-product', adminController.putEditProduct)
 
+// /admin/delete-product => DELETE
+router.delete('/delete-product', adminController.deleteProduct)
+
 module.exports = router;
