@@ -37,10 +37,7 @@ exports.postAddProduct = (req, res, next) => {
 exports.getEditProduct = (req,res,next) => {
   res.render('admin/edit-product', { 
     pageTitle: 'Edit Product Page', 
-    path: '/admin/edit-product',
-    addProductsActive: true,
-    productCSS: true,
-    formsCSS: true
+    path: '/admin/edit-product'
   })
 }
 
@@ -48,5 +45,9 @@ exports.putEditProduct = (req, res, next) => {
   const product = new Product(req.body.title)
   product.save()  
   console.log(req.body)
+  res.redirect('/admin/products')
+}
+
+exports.deleteProduct = (req, res, next) => {
   res.redirect('/admin/products')
 }
