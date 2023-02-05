@@ -26,6 +26,9 @@ router.post('/add-product', adminController.postAddProduct)
 // /admin/products => GET
 router.get('/products', adminController.getProducts)
 
+// /admin/products/:productId => GET 1 Product Detail
+router.get('/products/:productId', adminController.getProductDetail)
+
 // /admin/edit-product => GET
 router.get('/edit-product', adminController.getEditProduct)
 

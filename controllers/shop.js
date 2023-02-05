@@ -20,6 +20,19 @@ exports.getProductList = (req,res,next) => {
   })
 }
 
+exports.getProductDetail = (req,res,next) => {
+  const prodId = req.params.productId
+
+  Product.findById(prodId, product => {
+    res.render('shop/product-detail', {
+      product: product, 
+      path: `/products`,
+      pageTitle: `Product Detail: ${product.title}`
+    })
+  })
+  
+}
+
 exports.getCart = (req,res,next) => {
   Product.fetchAll(products => {
     res.render('shop/cart', {
@@ -47,16 +60,5 @@ exports.getCheckout = (req,res,next) => {
       path: '/checkout',
       pageTitle: 'Checkout'
     })
-  })
-}
-
-exports.getProductDetail = (req,res,next) => {
-  res.render('shop/product-detail/', {
-    // prods: products, 
-    path: '/product-detail/',
-    pageTitle: 'Product detail', 
-    // hasProducts: products.length > 0,
-    shopActive: true,
-    productCSS: true
   })
 }

@@ -13,6 +13,19 @@ exports.getProducts = (req,res,next) => {
   })
 }
 
+exports.getProductDetail = (req,res,next) => {
+  const prodId = req.params.productId
+
+  Product.findById(prodId, product => {
+    res.render('shop/product-detail', {
+      product: product, 
+      path: `/products`,
+      pageTitle: `Product Detail: ${product.title}`
+    })
+  })
+  
+}
+
 exports.getAddProduct = (req,res,next) => {
   res.render('admin/add-product', { 
     pageTitle: 'Add Product Page', 

@@ -2,7 +2,6 @@ const path = require('path')
 
 const express = require('express')
 
-const productsController = require('../controllers/products')
 const shopController = require('../controllers/shop')
 
 const router = express.Router()
@@ -22,7 +21,7 @@ router.get('/orders', shopController.getOrders)
 // /shop/checkout => GET
 router.get('/checkout', shopController.getCheckout)
 
-// /shop/product-detail => GET
-router.get('/products/product-detail', shopController.getProductDetail)
+// /shop/product-detail => GET 1 product
+router.get('/products/:productId', shopController.getProductDetail)
 
 module.exports = router
