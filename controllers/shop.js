@@ -5,7 +5,7 @@ exports.getIndex = (req,res,next) => {
     res.render('shop/index', {
       prods: products, 
       path: '/',
-      pageTitle: 'Shop', 
+      pageTitle: 'Shop Products List', 
       hasProducts: products.length > 0,
       shopActive: true,
       productCSS: true
