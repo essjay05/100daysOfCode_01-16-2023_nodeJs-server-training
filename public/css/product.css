@@ -39,14 +39,17 @@
   margin: 1rem 0.5rem;
 }
 
-.product-item button {
+.product-item button,
+.product-item .btn {
   padding: 0.5rem;
+  min-width: 6rem;
+  text-decoration: none;
 }
 
 .product-item .card__actions {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1024px) {
