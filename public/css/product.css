@@ -39,6 +39,16 @@
   margin: 1rem 0.5rem;
 }
 
+.product-item button {
+  padding: 0.5rem;
+}
+
+.product-item .card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 1024px) {
   .card.product-item {
     width: 45%;
@@ -48,5 +58,9 @@
 @media screen and (max-width: 500px) {
   .card.product-item {
     width: 95%;
+  }
+
+  .product-item .card__actions {
+    flex-direction: column;
   }
 }
