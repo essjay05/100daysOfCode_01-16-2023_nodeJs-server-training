@@ -19,6 +19,8 @@
   padding: 0.5rem;
 }
 
-.form-control input:focus {
+.form-control input:focus,
+.form-control textarea:focus,
+.product-form button:focus {
   outline-color: #00695c;
 }
