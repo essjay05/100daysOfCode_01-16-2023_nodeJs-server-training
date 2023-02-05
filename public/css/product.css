@@ -52,6 +52,14 @@
   justify-content: center;
 }
 
+.product-detail-section img {
+  height: 20rem;
+  width: 20rem;
+  object-fit: contain;
+  object-position: center;
+  margin: 1.25rem auto;
+}
+
 @media screen and (max-width: 1024px) {
   .card.product-item {
     width: 45%;
