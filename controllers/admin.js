@@ -13,6 +13,23 @@ exports.getProducts = (req,res,next) => {
   })
 }
 
+exports.getAddProduct = (req,res,next) => {
+  res.render('admin/add-product', { 
+    pageTitle: 'Add Product Page', 
+    path: '/admin/add-product',
+    addProductsActive: true,
+    productCSS: true,
+    formsCSS: true
+  })
+}
+
+exports.postAddProduct = (req, res, next) => {
+  const product = new Product(req.body.title)
+  product.save()  
+  console.log(req.body)
+  res.redirect('/')
+}
+
 exports.getEditProduct = (req,res,next) => {
   res.render('admin/edit-product', { 
     pageTitle: 'Edit Product Page', 

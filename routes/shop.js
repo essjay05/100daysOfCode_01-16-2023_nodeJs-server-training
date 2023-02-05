@@ -8,7 +8,7 @@ const shopController = require('../controllers/shop')
 const router = express.Router()
 
 // /shop/index => GET
-router.get('/', shopController.getShop)
+router.get('/', shopController.getIndex)
 
 // /shop/product-list => GET
 router.get('/products', shopController.getProductList)
@@ -20,6 +20,6 @@ router.get('/cart', shopController.getCart)
 router.get('/checkout', shopController.getCheckout)
 
 // /shop/product-detail => GET
-router.get('/product-detail', shopController.getProductDetail)
+router.get('/products/product-detail', shopController.getProductDetail)
 
 module.exports = router

@@ -1,6 +1,6 @@
 const Product = require('../models/product')
 
-exports.getShop = (req,res,next) => {
+exports.getIndex = (req,res,next) => {
   Product.fetchAll(products => {
     res.render('shop/index', {
       prods: products, 
@@ -56,7 +56,7 @@ exports.getProductDetail = (req,res,next) => {
   res.render('shop/product-detail/', {
     // prods: products, 
     path: '/product-detail/',
-    pageTitle: `Product detail`, 
+    pageTitle: 'Product detail', 
     // hasProducts: products.length > 0,
     shopActive: true,
     productCSS: true
