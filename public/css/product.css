@@ -40,7 +40,9 @@
 }
 
 .product-item button,
-.product-item .btn {
+.product-item .btn,
+.product-detail-section .btn,
+.product-detail-section button {
   padding: 0.5rem;
   min-width: 6rem;
   text-decoration: none;

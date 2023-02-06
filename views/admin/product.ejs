@@ -9,8 +9,9 @@
     <img src="<%= product.imageUrl %>" alt="Image of <%= product.title %>"/>
     <h2>$<%= product.price %></h2>
     <p><%= product.description %></p>
-    <div class="card__actions">
-      <%- include('../global/add-to-cart.ejs') %>
+    <div class="product-actions">
+      <a class="btn" href="/admin/edit-product">Edit</a>
+      <a class="btn" href="/admin/delete-product">Delete</a>
     </div>
   </main>
 <%- include('../global/end.ejs') %>
