@@ -27,12 +27,10 @@ exports.getProductDetail = (req,res,next) => {
 }
 
 exports.getAddProduct = (req,res,next) => {
-  res.render('admin/add-product', { 
+  res.render('admin/edit-product', { 
     pageTitle: 'Add Product Page', 
     path: '/admin/add-product',
-    addProductsActive: true,
-    productCSS: true,
-    formsCSS: true
+    editing: false
   })
 }
 
@@ -48,9 +46,23 @@ exports.postAddProduct = (req, res, next) => {
 }
 
 exports.getEditProduct = (req,res,next) => {
-  res.render('admin/edit-product', { 
-    pageTitle: 'Edit Product Page', 
-    path: '/admin/edit-product'
+  const editMode = req.query.edit
+  if (!editMode) {
+    return res.redirect('/')
+  }
+
+  const prodId = req.params.productId
+  Product.findById(prodId, product => {
+    if (!product) {
+      console.log('Error: Product not found!')
+      return res.redirect('/')
+    }
+    res.render('admin/edit-product', {
+      product: product, 
+      path: `/admin/edit-product`,
+      pageTitle: `Edit Product: ${product.title}`,
+      editing: editMode
+    })
   })
 }
 
