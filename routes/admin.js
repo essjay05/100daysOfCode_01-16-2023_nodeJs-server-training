@@ -32,8 +32,8 @@ router.get('/products/:productId', adminController.getProductDetail)
 // /admin/edit-product => GET
 router.get('/edit-product/:productId', adminController.getEditProduct)
 
-// /admin/edit-product => PUT
-router.put('/products/:productId', adminController.putEditProduct)
+// /admin/edit-product => POST
+router.post('/edit-product/:productId', adminController.postEditProduct)
 
 // /admin/delete-product => DELETE
 router.delete('/delete-product', adminController.deleteProduct)
